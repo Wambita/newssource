@@ -1,0 +1,29 @@
+{% macro categoryBadge(category) %} {% if category == 'general' %}
+<span class="badge badge-pill badge-info p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'business'%}
+<span class="badge badge-pill badge-danger p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'entertainment'%}
+<span class="badge badge-pill badge-success p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'health'%}
+<span class="badge badge-pill badge-primary p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'science'%}
+<span class="badge badge-pill badge-warning p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'sports'%}
+<span class="badge badge-pill badge-dark p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% elif category == 'technology'%}
+<span class="badge badge-pill badge-info p-2 mb-2" style="font-size: 1em">{{
+  category
+}}</span>
+{% endif %} {% endmacro %}
