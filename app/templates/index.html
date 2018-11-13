@@ -1,5 +1,23 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
   <h3 class="text-center">Welcome to The best News site</h3>
+  <div class="row">
+    {%for source in sources%}
+    <div class="col-md-4 col-sm-6">
+      <div class="card border-dark mb-3">
+        <div class="card-body">
+          <span
+            class="badge badge-pill badge-success p-2 mb-2"
+            style="font-size: 1em"
+            >{{ source.category }}</span
+          >
+          <h2 class="card-title">{{ source.name }}</h2>
+          <p class="card-text">{{ source.description }}</p>
+          <a href="/articles/{{source.id}}" class="card-link">View articles</a>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
 </div>
 {% endblock %}
