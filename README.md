@@ -12,7 +12,7 @@ This is an app that allows one to select from a list of news sources and display
 
 ## Link to live site
 
-https://github.com/sam10105/password-locker.git
+https://sam10105-news-highlight.herokuapp.com/
 
 ## Setup/Installation Requirements
 
