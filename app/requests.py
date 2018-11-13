@@ -19,7 +19,7 @@ def configure_request(app):
     
 def get_sources(category):
     """
-       Functions that gets all the sources 
+       Function that gets all the sources 
     """
     sources = newsapi.get_sources(category=category)
 
@@ -42,6 +42,7 @@ def get_articles(source):
     if all_articles['status'] == 'ok':
         articles_list = all_articles['articles']
         for article in articles_list:
+            id = article.get('source')['id']
             author = article.get('author')
             title = article.get('title')
             image = article.get('urlToImage')
@@ -50,7 +51,7 @@ def get_articles(source):
             url = article.get('url')
 
             if image:
-                article_object = Article(author, title, image, description, time, url)
+                article_object = Article(id, author, title, image, description, time, url)
                 results.append(article_object)
 
     return results
